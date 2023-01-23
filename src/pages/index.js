@@ -197,6 +197,7 @@ const MainContainer = styled.main`
    //flex-direction: column;
   //flex-wrap: wrap;
   background: url(${GridSvg});
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 200rem; 
   object-fit: cover;
