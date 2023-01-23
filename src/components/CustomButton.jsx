@@ -9,7 +9,7 @@ const CustomButton = styled.button`
     outline: none;
     border: none;
     font-size: 18px;
-    font-weight: bold;
+    //font-weight: bold;
     cursor: pointer;
     height: 50px;
     border: 0px;

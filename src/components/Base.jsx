@@ -9,7 +9,7 @@ const Base = () => {
         <BaseContainer>
             <TextAndButton>
                 <h1>DIGITAL DOCUMENT VERIFICATION SYSTEM</h1>
-                <p>View, download and share digitally signed documents</p>
+                <p>Issue and manage digitally signed documents</p>
                 <CustomButton>GET STARTED</CustomButton>
             </TextAndButton>
             <img src={CertImg}></img>

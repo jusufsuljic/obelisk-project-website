@@ -44,7 +44,7 @@ const CardDivContainer = styled.div`
 
     p{
         font-size: 1.3rem;
-        text-align: justify;
+        text-align: start;
     }
 
     h3, p{

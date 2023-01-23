@@ -1,5 +1,5 @@
 import * as React from "react"
-import {useState} from "react"
+import { useState } from "react"
 import styled from "styled-components"
 import Base from "../components/Base";
 import BenefitCard from "../components/BenefitCard";
@@ -14,6 +14,7 @@ import CustomButton from '../components/CustomButton'
 import PolySvg from '../images/scatter-2.svg'
 import PolySvgFilled from '../images/poly-scatter-fill.svg'
 import GridSvg from '../images/low-poly-grid-haikei.svg'
+import InstagramIcon from '@mui/icons-material/Instagram';
 import $ from "jquery";
 
 
@@ -24,11 +25,11 @@ const IndexPage = () => {
   const [mobileLinksVisible, setMobileLinksVisible] = useState(false);
 
   function toggleMenu() {
-    if(!mobileLinksVisible){
-      $('.navbar-links-container').css({display: 'flex'});
+    if (!mobileLinksVisible) {
+      $('.navbar-links-container').css({ display: 'flex' });
       setMobileLinksVisible(true);
-    } else{
-      $('.navbar-links-container').css({display: 'none'});
+    } else {
+      $('.navbar-links-container').css({ display: 'none' });
       setMobileLinksVisible(false);
     }
   }
@@ -41,15 +42,15 @@ const IndexPage = () => {
           <img src={AppIcon}></img>
         </div>
         <div className='navbar-toggler-container' onClick={() => toggleMenu()}>
-          <MenuIcon style={{fontSize: '30px', color: '#ffffff'}}></MenuIcon>
+          <MenuIcon style={{ fontSize: '30px', color: '#ffffff' }}></MenuIcon>
         </div>
         <div className='navbar-links-container'>
           <a href="contact.asp">Contact</a>
           <a href="about.asp">Request a demo</a>
         </div>
 
-        
-        
+
+
       </NewNavbar>
       {/* <NavBar>
         <ul>
@@ -65,39 +66,43 @@ const IndexPage = () => {
 
       <BenefitWrapper>
 
-      <BenefitContainer>
-        <CenterTextContainer>
-          <h1 className='center-header'>We are changing the world of digital documents.</h1>
-          <p>Manage your personal collection of digitally signed & verified documents, and share them effortlessly.</p>
+        <BenefitContainer>
+          <CenterTextContainer>
+            <h1 className='center-header'>We are changing the world of digital documents.</h1>
+            <p>Manage your personal collection of digitally signed & verified documents, and share them effortlessly.</p>
 
-        </CenterTextContainer>
-        {/* <h1>Why choose us?</h1> */}
-        <br />
-        <CardContainer>
-          <BenefitCard icon={TocIcon} title="Management" text="Your documents are safely stored on the worlds most transparent trust ledger - blockchain. Access and manage those documents through a simple UI."></BenefitCard>
-          <BenefitCard icon={FingerprintIcon} title="Digital identity" text="Build your digital identity by storing personal documents. Identification documents, licenses, certificates, tickets - all in one place, secure and safe."></BenefitCard>
-          <BenefitCard icon={ShieldOutlinedIcon} title="Trust & security" text="We protect your digital identity at all times, as well as help businesses establish trust with their clients. We handle the trust, you handle the rest."></BenefitCard>
+          </CenterTextContainer>
+          {/* <h1>Why choose us?</h1> */}
+          <br />
+          <CardContainer>
+            <BenefitCard icon={TocIcon} title="Management" text="Securely store and manage your documents on blockchain with our user-friendly platform. Trust us to keep your valuable information safe and transparent."></BenefitCard>
+            <BenefitCard icon={FingerprintIcon} title="Digital identity" text="Elevate your digital identity and safeguard your important personal documents with our cutting-edge platform. Store identification documents, licenses, certificates, and tickets all in one secure, tamper-proof location."></BenefitCard>
+            <BenefitCard icon={ShieldOutlinedIcon} title="Trust & security" text="Transform the way you conduct business and establish trust online with our advanced document verification system. Verify your documents quickly and securely, without the need for paper, and experience the future of digital business."></BenefitCard>
 
-        </CardContainer>
-        <CenterTextContainer>
-          {/* <img style={{position: 'absolute', zIndex: "1", left:'5rem', top: '80rem', opacity:'0.1'}} src={PolySvg}/> */}
+          </CardContainer>
+          <CenterTextContainer>
+            {/* <img style={{position: 'absolute', zIndex: "1", left:'5rem', top: '80rem', opacity:'0.1'}} src={PolySvg}/> */}
 
-          <h1 style={{ zIndex: "2" }} className='center-header'>Simple & effective way to prove ownership.</h1>
-          <p>Scale your business and establish trust between you and your customers.</p>
-          <CustomButton style={{width:'20rem', marginBottom:'100px'}}>GET IN TOUCH</CustomButton>
+            <h1 style={{ zIndex: "2" }} className='center-header'>Simple & effective way to prove ownership.</h1>
+            <p>Scale your business and establish trust between you and your customers.</p>
+            <CustomButton style={{ width: '20rem', marginBottom: '100px' }}>GET IN TOUCH</CustomButton>
+          </CenterTextContainer>
+          <br></br>
+          <br />
 
-
-        </CenterTextContainer>
-        <br></br>
-        <br />
-
-      </BenefitContainer>
+        </BenefitContainer>
       </BenefitWrapper>
 
       <p style={{ marginTop: '50px', paddingLeft: '60px', color: 'white', fontSize: '1.75rem' }}>Contact us:</p>
-      <p style={{ paddingLeft: '60px', color: 'white', fontSize: '1.5rem' }}>
-        project.docunique@gmail.com
-      </p>
+      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+        <p style={{ paddingLeft: '60px', color: 'white', fontSize: '1.5rem' }}>
+          project.docunique@gmail.com
+        </p>
+        <a href="https://www.instagram.com/project.docunique/?igshid=YmMyMTA2M2Y%3D">
+          <InstagramIcon style={{ fontSize: '50px', paddingLeft: '60px', color: 'white' }} />
+        </a>
+      </div>
+
       <br></br>
       <br></br>
 
@@ -109,6 +114,15 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+const MailChimp = styled.div`
+  #mc_embed_signup{
+    background: #fff; 
+    clear: left;
+    font: 14px Helvetica,Arial,sans-serif;
+    width: 600px;
+  }
+`
 
 const PolygonsEffectImg = styled.img`
   position: absolute;
