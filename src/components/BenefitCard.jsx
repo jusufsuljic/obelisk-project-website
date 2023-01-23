@@ -28,13 +28,15 @@ const HeaderWithIcon = styled.div`
 
 const CardDivContainer = styled.div`
     z-index: 2;
+    background: #ffffff;
+    box-shadow: 0px 0px 46px -27px rgba(0,0,0,0.83);
     //background: #007EA7;
     padding: 1.1rem;
     height:40rem;
     width: 21.8rem;
     //box-shadow: 4px 6px 7px 3px rgba(0, 23, 31, 0.83);
-    border-radius: 25px;
-    border: 1px solid rgba(0, 126, 167, 0.2);
+    border-radius: 1px;
+    border: 2px solid rgba(0, 126, 167, 0.2);
     h3{
         font-size: 1.8rem;
         font-weight: bold;

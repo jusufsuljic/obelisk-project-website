@@ -12,6 +12,7 @@ import ShieldOutlinedIcon from '@mui/icons-material/ShieldOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import CustomButton from '../components/CustomButton'
 import PolySvg from '../images/scatter-2.svg'
+import PolySvgFilled from '../images/poly-scatter-fill.svg'
 import GridSvg from '../images/low-poly-grid-haikei.svg'
 import $ from "jquery";
 
@@ -62,6 +63,8 @@ const IndexPage = () => {
       <Base />
       <Polygon />
 
+      <BenefitWrapper>
+
       <BenefitContainer>
         <CenterTextContainer>
           <h1 className='center-header'>We are changing the world of digital documents.</h1>
@@ -81,7 +84,7 @@ const IndexPage = () => {
 
           <h1 style={{ zIndex: "2" }} className='center-header'>Simple & effective way to prove ownership.</h1>
           <p>Scale your business and establish trust between you and your customers.</p>
-          <CustomButton style={{width:'20rem'}}>GET IN TOUCH</CustomButton>
+          <CustomButton style={{width:'20rem', marginBottom:'100px'}}>GET IN TOUCH</CustomButton>
 
 
         </CenterTextContainer>
@@ -89,6 +92,7 @@ const IndexPage = () => {
         <br />
 
       </BenefitContainer>
+      </BenefitWrapper>
 
       <p style={{ marginTop: '50px', paddingLeft: '60px', color: 'white', fontSize: '1.75rem' }}>Contact us:</p>
       <p style={{ paddingLeft: '60px', color: 'white', fontSize: '1.5rem' }}>
@@ -114,6 +118,7 @@ const PolygonsEffectImg = styled.img`
   opacity:0.1;
   width: 100vw;
   overflow: hidden;
+  object-fit: cover;
 
   @media only screen and (max-width: 600px) {
     height: 100vh;
@@ -128,6 +133,7 @@ const CenterTextContainer = styled.div`
   justify-content: center;
   align-items: center;
   h1.center-header{
+    text-align: center;
     font-size: 2.75rem;
     font-weight: bold;
     text-color: #003459;
@@ -144,13 +150,17 @@ const CenterTextContainer = styled.div`
   }
 `
 
+const BenefitWrapper = styled.div`
+`
+
 const BenefitContainer = styled.div`
-  background: #ffffff;
+  //background: #ffffff;
   display: flex;
   flex-direction: column;
   padding-left: 3.25rem;
   padding-right: 3.25rem;
   box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.52);
+  background: url(${PolySvgFilled});
 
   h1{
     font-size: 3rem;
@@ -169,9 +179,13 @@ const CardContainer = styled.div`
 `
 
 const MainContainer = styled.main`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  //display: flex;
+   //flex-direction: column;
+  //flex-wrap: wrap;
+  background: url(${GridSvg});
+  background-repeat: no-repeat;
+  background-size: 200rem; 
+  object-fit: cover;
 `
 
 const Polygon = styled.div`
