@@ -16,6 +16,7 @@ import PolySvgFilled from '../images/poly-scatter-fill.svg'
 import GridSvg from '../images/low-poly-grid-haikei.svg'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import $ from "jquery";
+import MailChimpForm from "../components/MailChimpForm";
 
 
 
@@ -85,7 +86,12 @@ const IndexPage = () => {
 
             <h1 style={{ zIndex: "2" }} className='center-header'>Simple & effective way to prove ownership.</h1>
             <p>Scale your business and establish trust between you and your customers.</p>
-            <CustomButton style={{ width: '20rem', marginBottom: '100px' }}>GET IN TOUCH</CustomButton>
+            <br/>
+            <br/>
+            {/* <CustomButton style={{ width: '20rem', marginBottom: '100px' }}>GET IN TOUCH</CustomButton> */}
+            <MailChimpForm></MailChimpForm>
+            <br></br>
+            <br></br>
           </CenterTextContainer>
           <br></br>
           <br />
@@ -99,7 +105,7 @@ const IndexPage = () => {
           project.docunique@gmail.com
         </p>
         <a href="https://www.instagram.com/project.docunique/?igshid=YmMyMTA2M2Y%3D">
-          <InstagramIcon style={{ fontSize: '50px', paddingLeft: '60px', color: 'white' }} />
+          <InstagramIcon style={{ fontSize: '50px', paddingLeft: '20px', color: 'white' }} />
         </a>
       </div>
 
@@ -112,6 +118,11 @@ const IndexPage = () => {
     </MainContainer>
   )
 }
+
+//U a41fc6603658d2685e46c129a
+// ID 71afb1a654
+// URL https://app.us21.list-manage.com/subscribe/post
+// MERGE0
 
 export default IndexPage
 
@@ -159,7 +170,7 @@ const CenterTextContainer = styled.div`
   }
 
   button{
-    margin-top: 2rem;
+    //margin-top: 2rem;
     width: 13rem;
   }
 `
