@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const CustomButton = styled.button`
     z-index: 2;
-    border-radius: 0px;
+    border-radius: 5px;
     background-color: ${props => (props.secondary ? '#FFF' : '#00A9FF')};
     color: ${props => (props.secondary ? '#00A8E8' : '#FFF')};
     padding: 10px 15px;
