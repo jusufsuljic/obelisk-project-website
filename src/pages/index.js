@@ -1,11 +1,13 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import styled from "styled-components"
 import Base from "../components/Base";
 import BenefitCard from "../components/BenefitCard";
 import GlobalStyle from '../globalStyles';
 import WaveImg from '../images/wave-haikei.svg'
 import AppIcon from '../images/logohoriznew.png'
+//import AppIcon from '../images/docunique logo 1.png'
+//import AppIcon from '../images/docunique.io logo.png'
 import TocIcon from '@mui/icons-material/Toc';
 import FingerprintIcon from '@mui/icons-material/Fingerprint';
 import ShieldOutlinedIcon from '@mui/icons-material/ShieldOutlined';
@@ -25,6 +27,11 @@ const IndexPage = () => {
 
   const [mobileLinksVisible, setMobileLinksVisible] = useState(false);
 
+  const executeScroll = () => {
+    const formm = document.getElementById('subscribe-form');
+    formm.scrollIntoView({behavior: 'smooth', block: 'start'})
+  }
+
   function toggleMenu() {
     if (!mobileLinksVisible) {
       $('.navbar-links-container').css({ display: 'flex' });
@@ -40,14 +47,14 @@ const IndexPage = () => {
       <GlobalStyle />
       <NewNavbar>
         <div className='navbar-logo-container'>
-          <img src={AppIcon}></img>
+          <a href="/"><img src={AppIcon}></img></a>
         </div>
         <div className='navbar-toggler-container' onClick={() => toggleMenu()}>
           <MenuIcon style={{ fontSize: '30px', color: '#ffffff' }}></MenuIcon>
         </div>
         <div className='navbar-links-container'>
-          <a href="contact.asp">Contact</a>
-          <a href="about.asp">Request a demo</a>
+          <a onClick={() => executeScroll()}>Contact</a>
+          {/* <a href="about.asp">Request a demo</a> */}
         </div>
 
 
@@ -278,6 +285,7 @@ padding: 20px;
     a:hover{
      text-decoration: underline;
      text-underline-offset: 5px;
+     cursor: pointer;
 
    }
   

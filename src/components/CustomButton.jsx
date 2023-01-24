@@ -13,9 +13,7 @@ const CustomButton = styled.button`
     cursor: pointer;
     height: 50px;
     border: 0px;
-    -webkit-box-shadow: 9px 9px 39px -4px rgba(0,0,0,1);
-    -moz-box-shadow: 9px 9px 39px -4px rgba(0,0,0,1);
-    box-shadow: 9px 9px 39px -4px rgba(0,0,0,1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: all 0.3s ease 0s;
     :hover{
         transform: translateY(-7px);

@@ -24,7 +24,7 @@ const CustomSubscribeForm = ({ status, message, onValidated }) => {
 
     return (
         <CustomSubscribeFormContainer id="subscribe-form">
-            <h3>Join our email list for future updates</h3>
+            <h3 style={{color: "white"}}>Join our email list for future updates</h3>
             {status === "sending" && (
                 <div className="mc__alert mc__alert--sending">
                     sending...
@@ -51,7 +51,7 @@ const CustomSubscribeForm = ({ status, message, onValidated }) => {
                 </CustomInputField>
                 {
                     status !== "success" &&
-                    <CustomButton onClick={(e) => handleSubmit(e)} type="submit">Subscribe</CustomButton>
+                    <CustomButton onClick={(e) => handleSubmit(e)} type="submit">SUBSCRIBE</CustomButton>
                 }
 
             </FieldsContainer>
@@ -77,14 +77,17 @@ justify-content: center;
 align-items: center;
 align-content: center;
 flex-wrap: wrap;
-
-
-    
+margin-bottom: 20px;
 `
 
 const CustomSubscribeFormContainer = styled.form`
+background: #205388;
 padding: 3rem;
-    border: 2px solid rgba(0,126,167,0.2);
+    border: 1px solid rgba(0,126,167,0.1);
+    border-radius: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /* box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+            10px 10px 15px rgba(70,70,70,0.12); */
     /* -webkit-box-shadow: 0px 0px 39px -24px rgba(0,0,0,1);
 -moz-box-shadow: 0px 0px 39px -24px rgba(0,0,0,1);
 box-shadow: 0px 0px 39px -24px rgba(0,0,0,1); */
@@ -95,7 +98,7 @@ box-shadow: 0px 0px 39px -24px rgba(0,0,0,1); */
     h3{
         font-size: 1.5rem;
        color: #003459;
-       margin-bottom: 50px;
+       margin-bottom: 30px;
     }
     
 `
