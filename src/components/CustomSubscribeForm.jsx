@@ -83,6 +83,9 @@ margin-bottom: 20px;
 const CustomSubscribeFormContainer = styled.form`
 background: #205388;
 padding: 3rem;
+@media only screen and (max-width: 400px) {
+    padding: 1rem;
+}
     border: 1px solid rgba(0,126,167,0.1);
     border-radius: 20px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;

@@ -32,6 +32,11 @@ const IndexPage = () => {
     formm.scrollIntoView({behavior: 'smooth', block: 'start'})
   }
 
+  const executeScrollToContent = () => {
+    const content = document.getElementById('center-header-text');
+    content.scrollIntoView({behavior: 'smooth', block: 'start'})
+  }
+
   function toggleMenu() {
     if (!mobileLinksVisible) {
       $('.navbar-links-container').css({ display: 'flex' });
@@ -69,14 +74,14 @@ const IndexPage = () => {
           <li><a href="about.asp">Request a demo</a></li>
         </ul>
       </NavBar> */}
-      <Base />
+      <Base scrollFn={executeScrollToContent} />
       <Polygon />
 
       <BenefitWrapper>
 
         <BenefitContainer>
           <CenterTextContainer>
-            <h1 className='center-header'>We are changing the world of digital documents.</h1>
+            <h1 id="center-header-text" className='center-header'>We are changing the world of digital documents.</h1>
             <p>Manage your personal collection of digitally signed & verified documents, and share them effortlessly.</p>
 
           </CenterTextContainer>

@@ -4,13 +4,13 @@ import CertImg from '../images/cert_img.svg'
 import CustomButton from './CustomButton'
 import bgImage from '../images/low-poly-grid-haikei.svg'
 
-const Base = () => {
+const Base = ({scrollFn}) => {
     return (
         <BaseContainer>
             <TextAndButton>
                 <h1>DIGITAL DOCUMENT VERIFICATION SYSTEM</h1>
                 <p>Issue and manage digitally signed documents</p>
-                <CustomButton>GET STARTED</CustomButton>
+                <CustomButton onClick={() => scrollFn()}>GET STARTED</CustomButton>
             </TextAndButton>
             <img src={CertImg}></img>
             
@@ -48,6 +48,16 @@ const BaseContainer = styled.div`
         }
         
     }
+
+    @media only screen and (min-width: 600px) {
+
+        img{
+            max-width: 20rem;
+        }
+        
+    }
+
+    
 `
 
 const TextAndButton = styled.div`
