@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
- 
+
 const GlobalStyle = createGlobalStyle`
   *{
         font-family: "Montserrat";
@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
   html{
         font-size: 16px;
+        scroll-behavior: smooth;
     }
 
     /* Extra small devices (phones, 600px and down) */
@@ -62,5 +63,5 @@ const GlobalStyle = createGlobalStyle`
 
     }
 `;
- 
+
 export default GlobalStyle;
