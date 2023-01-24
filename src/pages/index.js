@@ -183,7 +183,7 @@ const CenterTextContainer = styled.div`
 
   button{
     //margin-top: 2rem;
-    width: 13rem;
+    width: 17rem;
   }
 `
 

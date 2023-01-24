@@ -33,7 +33,7 @@ const CardDivContainer = styled.div`
             10px 10px 15px rgba(70,70,70,0.12);
     //background: #007EA7;
     padding: 1.1rem;
-    height:40rem;
+    height: 40rem;
     width: 21.8rem;
     //box-shadow: 4px 6px 7px 3px rgba(0, 23, 31, 0.83);
     border-radius: 10px;
@@ -55,7 +55,10 @@ const CardDivContainer = styled.div`
     max-height: 457px;
 
     @media only screen and (max-width: 600px) {
-        height: 20rem;
+        height: 22rem;
+    }
+    @media only screen and (min-width: 600px) {
+        height: 25rem;
     }
     
 `

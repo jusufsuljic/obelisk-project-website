@@ -78,5 +78,8 @@ const TextAndButton = styled.div`
     button{
         margin-top: 20px;
         width: 20rem;
+        @media only screen and (min-width: 600px) {
+            margin-bottom: 40px;
+        }
     }
 `
