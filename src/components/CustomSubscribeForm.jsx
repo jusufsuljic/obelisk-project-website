@@ -26,7 +26,7 @@ const CustomSubscribeForm = ({ status, message, onValidated }) => {
         <CustomSubscribeFormContainer id="subscribe-form">
             <h3 style={{color: "white"}}>Join our email list for future updates</h3>
             {status === "sending" && (
-                <div className="mc__alert mc__alert--sending">
+                <div style={{color:"white", marginBottom:"15px"}} className="mc__alert mc__alert--sending">
                     sending...
                 </div>
             )}
@@ -38,6 +38,7 @@ const CustomSubscribeForm = ({ status, message, onValidated }) => {
             )}
             {status === "success" && (
                 <div
+                    style={{color:"white", marginBottom:"10px"}}
                     className="mc__alert mc__alert--success"
                     dangerouslySetInnerHTML={{ __html: message }}
                 />
