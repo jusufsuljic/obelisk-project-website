@@ -114,7 +114,7 @@ const IndexPage = () => {
       <p style={{ marginTop: '50px', paddingLeft: '60px', color: 'white', fontSize: '1.75rem' }}>Contact us:</p>
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
         <p style={{ paddingLeft: '60px', color: 'white', fontSize: '1.5rem' }}>
-          project.docunique@gmail.com
+          info@docunique.com
         </p>
         <a href="https://www.instagram.com/project.docunique/?igshid=YmMyMTA2M2Y%3D">
           <InstagramIcon style={{ fontSize: '50px', paddingLeft: '20px', color: 'white' }} />
