@@ -116,7 +116,7 @@ const IndexPage = () => {
         <p style={{ paddingLeft: '60px', color: 'white', fontSize: '1.5rem' }}>
           info@docunique.io
         </p>
-        <a href="https://www.instagram.com/project.docunique/?igshid=YmMyMTA2M2Y%3D">
+        <a href="https://instagram.com/docunique.io?igshid=YmMyMTA2M2Y=">
           <InstagramIcon style={{ fontSize: '50px', paddingLeft: '20px', color: 'white' }} />
         </a>
       </div>
