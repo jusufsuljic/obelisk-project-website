@@ -3,10 +3,16 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `The Obelisk Project Website`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `DocUnique`,
+    siteUrl: `https://www.docunique.io`
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/favicon.png',
+      },
+    },
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
