@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import styled from "styled-components"
 import Base from "../components/Base";
 import BenefitCard from "../components/BenefitCard";
@@ -27,6 +27,15 @@ import { PopupButton } from "react-calendly";
 const IndexPage = () => {
 
   const [mobileLinksVisible, setMobileLinksVisible] = useState(false);
+  const [rootElement, setRootElement] = useState(null);
+
+  useEffect(() => {
+    const rootEl = document.getElementById("___gatsby");
+    if (rootEl){
+      setRootElement(rootEl);
+    }
+  }, [])
+  
 
   const executeScroll = () => {
     const formm = document.getElementById('subscribe-form');
@@ -63,7 +72,7 @@ const IndexPage = () => {
           <PopupButton
             className="calendly-btn"
             url="https://calendly.com/docunique/30min"
-            rootElement={document.getElementById("___gatsby")}
+            rootElement={rootElement}
             text="Schedule a meeting"
           />
           {/* <a href="about.asp">Request a demo</a> */}
@@ -81,7 +90,7 @@ const IndexPage = () => {
           <li><a href="about.asp">Request a demo</a></li>
         </ul>
       </NavBar> */}
-      <Base scrollFn={executeScrollToContent} />
+      <Base rootElement={rootElement} scrollFn={executeScrollToContent} />
       <Polygon />
 
       <BenefitWrapper>

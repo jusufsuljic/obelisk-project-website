@@ -6,7 +6,7 @@ import bgImage from '../images/low-poly-grid-haikei.svg'
 import { PopupButton } from 'react-calendly'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
-const Base = ({ scrollFn }) => {
+const Base = ({ scrollFn, rootElement }) => {
     return (
         <BaseContainer>
             <TextAndButton>
@@ -16,7 +16,7 @@ const Base = ({ scrollFn }) => {
                 <PopupButton
                     className="calendly-btnn"
                     url="https://calendly.com/docunique/30min"
-                    rootElement={document.getElementById("___gatsby")}
+                    rootElement={rootElement}
                     text="SCHEDULE A MEETING"
                 />
             </TextAndButton>
