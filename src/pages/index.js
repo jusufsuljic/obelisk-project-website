@@ -20,6 +20,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import $ from "jquery";
 import MailChimpForm from "../components/MailChimpForm";
 import { PopupButton } from "react-calendly";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
 
@@ -134,6 +135,9 @@ const IndexPage = () => {
         </p>
         <a href="https://instagram.com/docunique.io?igshid=YmMyMTA2M2Y=">
           <InstagramIcon style={{ fontSize: '50px', paddingLeft: '20px', color: 'white' }} />
+        </a>
+        <a href="https://www.linkedin.com/company/docunique/">
+          <LinkedInIcon style={{ fontSize: '50px', paddingLeft: '20px', color: 'white' }} />
         </a>
       </div>
 

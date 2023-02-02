@@ -4,7 +4,6 @@ import CertImg from '../images/cert_img.svg'
 import CustomButton from './CustomButton'
 import bgImage from '../images/low-poly-grid-haikei.svg'
 import { PopupButton } from 'react-calendly'
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 const Base = ({ scrollFn, rootElement }) => {
     return (
