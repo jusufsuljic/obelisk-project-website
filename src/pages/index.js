@@ -19,6 +19,7 @@ import GridSvg from '../images/low-poly-grid-haikei.svg'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import $ from "jquery";
 import MailChimpForm from "../components/MailChimpForm";
+import { PopupButton } from "react-calendly";
 
 
 
@@ -29,12 +30,12 @@ const IndexPage = () => {
 
   const executeScroll = () => {
     const formm = document.getElementById('subscribe-form');
-    formm.scrollIntoView({behavior: 'smooth', block: 'start'})
+    formm.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   const executeScrollToContent = () => {
     const content = document.getElementById('center-header-text');
-    content.scrollIntoView({behavior: 'smooth', block: 'start'})
+    content.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   function toggleMenu() {
@@ -59,6 +60,12 @@ const IndexPage = () => {
         </div>
         <div className='navbar-links-container'>
           <a onClick={() => executeScroll()}>Contact</a>
+          <PopupButton
+            className="calendly-btn"
+            url="https://calendly.com/docunique/30min"
+            rootElement={document.getElementById("___gatsby")}
+            text="Schedule a meeting"
+          />
           {/* <a href="about.asp">Request a demo</a> */}
         </div>
 
@@ -98,8 +105,8 @@ const IndexPage = () => {
 
             <h1 style={{ zIndex: "2" }} className='center-header'>Simple & effective way to prove ownership.</h1>
             <p>Scale your business and establish trust between you and your customers.</p>
-            <br/>
-            <br/>
+            <br />
+            <br />
             {/* <CustomButton style={{ width: '20rem', marginBottom: '100px' }}>GET IN TOUCH</CustomButton> */}
             <MailChimpForm></MailChimpForm>
             <br></br>
@@ -274,6 +281,23 @@ const Polygon = styled.div`
 // `
 
 const NewNavbar = styled.div`
+.calendly-btn{
+  text-decoration: none;
+  background: none;
+  border: none;
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  :hover{
+     text-decoration: underline;
+     text-underline-offset: 5px;
+     cursor: pointer;
+  }
+
+}
 padding: 20px;
     img{
       height: 4rem;

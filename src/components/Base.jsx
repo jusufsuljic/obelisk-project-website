@@ -3,17 +3,24 @@ import styled from 'styled-components'
 import CertImg from '../images/cert_img.svg'
 import CustomButton from './CustomButton'
 import bgImage from '../images/low-poly-grid-haikei.svg'
+import { PopupButton } from 'react-calendly'
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
-const Base = ({scrollFn}) => {
+const Base = ({ scrollFn }) => {
     return (
         <BaseContainer>
             <TextAndButton>
                 <h1>DIGITAL DOCUMENT VERIFICATION SYSTEM</h1>
                 <p>Issue and manage digitally signed documents</p>
-                <CustomButton onClick={() => scrollFn()}>GET STARTED</CustomButton>
+                {/* <CustomButton onClick={() => scrollFn()}>GET STARTED</CustomButton> */}
+                <PopupButton
+                    className="calendly-btnn"
+                    url="https://calendly.com/docunique/30min"
+                    rootElement={document.getElementById("___gatsby")}
+                    text="SCHEDULE A MEETING"
+                />
             </TextAndButton>
             <img src={CertImg}></img>
-            
         </BaseContainer>
     )
 }
@@ -23,6 +30,25 @@ export default Base
 
 
 const BaseContainer = styled.div`
+    .calendly-btnn{
+        z-index: 2;
+        border-radius: 5px;
+        background-color: #00A9FF;
+        color:  #FFF;
+        padding: 10px 15px;
+        outline: none;
+        border: none;
+        font-size: 18px;
+        //font-weight: bold;
+        cursor: pointer;
+        height: 50px;
+        border: 0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: all 0.3s ease 0s;
+        :hover{
+            transform: translateY(-7px);
+        }
+    }
 /* :before{
     background-image: url(${bgImage});
     background-size: cover;
@@ -80,6 +106,9 @@ const TextAndButton = styled.div`
         width: 20rem;
         @media only screen and (min-width: 600px) {
             margin-bottom: 40px;
+        }
+        @media only screen and (min-width: 300px) and (max-width: 1000px) {
+            width: 30rem;
         }
     }
 `
