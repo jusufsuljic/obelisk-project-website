@@ -32,11 +32,11 @@ const IndexPage = () => {
 
   useEffect(() => {
     const rootEl = document.getElementById("___gatsby");
-    if (rootEl){
+    if (rootEl) {
       setRootElement(rootEl);
     }
   }, [])
-  
+
 
   const executeScroll = () => {
     const formm = document.getElementById('subscribe-form');

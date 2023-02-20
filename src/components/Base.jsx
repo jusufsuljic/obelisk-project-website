@@ -16,7 +16,7 @@ const Base = ({ scrollFn, rootElement }) => {
                     className="calendly-btnn"
                     url="https://calendly.com/docunique/30min"
                     rootElement={rootElement}
-                    text="SCHEDULE A MEETING"
+                    text="BOOK A DEMO"
                 />
             </TextAndButton>
             <img src={CertImg}></img>
